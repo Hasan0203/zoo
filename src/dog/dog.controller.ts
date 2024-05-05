@@ -15,4 +15,10 @@ export class DogController {
     console.log('query:', query);
     return this.dogService.introduce();
   }
+
+  @Post('edit')
+  public modifyDetail(@Body() body: any): string {
+    console.log('body:', body);
+    return this.dogService.modifyDetail();
+  }
 }
